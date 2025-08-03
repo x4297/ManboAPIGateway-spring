@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1/mytest
+    username: postgres
+    password: 123@abc
+    
+server:
+  address: 127.0.0.1
+  port: 12345
+  
+message-sender:
+  url: http://127.0.0.1:14332/hello
+  appid: aaa
+  secret: bbb

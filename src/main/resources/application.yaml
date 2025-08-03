@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: manbo-api-gateway
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  profiles:
+    active: dev
+
+server:
+  tomcat:
+    basedir: tmcat
+    accesslog:
+      enabled: true
+
+limit:
+  second: 10
+  times: 2

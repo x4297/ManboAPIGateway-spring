@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="io.github.x4297.manboapigateway.mapper.OperateLogMapper" >
+    <insert id="insert">
+        insert into operate_log (method, input, output, error, date_time)
+        values (#{method}, #{input}, #{output}, #{error}, #{dateTime})
+    </insert>
+
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from operate_log where date_time >= #{since}
+    </select>
+</mapper>
